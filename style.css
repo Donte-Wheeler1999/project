@@ -1,85 +1,72 @@
-* {
-    box-sizing: border-box;
-}
-
-.title {
-    text-align: center;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #2196F3;
-    color: white;
-  }
-  
-  .topnav .login-container {
-    float: right;
-  }
-  
-  .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-    width: 120px;
-  }
-  
-  .topnav .login-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background-color: #555;
-    color: white;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .topnav .login-container button:hover {
-    background-color: green;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav .login-container {
-      float: none;
-    }
+  font-family: sans-serif;
+  margin: 0 50px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .topnav a, .topnav input[type=text], .topnav .login-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    
-    .topnav input[type=text] {
-      border: 1px solid #ccc;  
-    }
-  }
+.app {
+  width: 500px;
+  height: 500px;
+  border: 5px solid rgba(171, 134, 134, 0.349);
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+#addNew {
+  display: flex;
+  background-color: rgba(171, 134, 134, 0.349);
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fa-plus {
+  background-color: rgba(171, 134, 134, 0.349);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+#tasks div {
+  background-color: #e2eede;
+  background-color: rgba(171, 134, 134, 0.349);
+  padding: 5px;
+  border-radius: 6px;
+  display: grid;
+  gap: 4px;
+}
+
+#tasks div.options {
+  justify-self: right;
+  display: flex;
+  gap: 10px;
+}
+
+#tasks div.options i {
+  cursor: pointer;
+  font-size: 0.5rem;
+}
+
+#msg {
+  color: red;
+  padding-top: 10px;
+}
 
